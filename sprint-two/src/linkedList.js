@@ -5,7 +5,7 @@ var LinkedList = function(){
 
   list.addToTail = function(value){
     value = new Node(value);
-    if(list.head === null){
+    if(!list.head){
       list.head = value;
     }
     if (list.tail){
@@ -33,7 +33,6 @@ var LinkedList = function(){
     }
     return result;
   };
-
   return list;
 };
 
@@ -48,4 +47,7 @@ var Node = function(value){
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * addToTail = Constant
+ * removeHead = Constant
+ * contains = linear
  */

@@ -5,10 +5,10 @@ var HashTable = function(){
 };
 
 HashTable.prototype.insert = function(k, v){
-  var i = getIndexBelowMaxForKey(k, this._limit); //
+  var i = getIndexBelowMaxForKey(k, this._limit);
   var item = [k,v];
   var bucket =[];
-  var temp = this._storage.get(i);//[[v,v],[i,i]]
+  var temp = this._storage.get(i);
   bucket.push(item);
   if(temp){
     temp.push(item);
@@ -40,13 +40,12 @@ HashTable.prototype.remove = function(k){
     }
   }
   this._storage.set(i,temp);
-  //});
+
 };
 
-//main =[[["bob","3840"],["robert",9847987]],[["google","money"],["superman","Help"]]]
-//temp=[["bob","3840"],["robert",9847987]]
-//temp=[["robert",9847987]]
-//[b,e,r].splice(1,1)=[b,r]
 /*
  * Complexity: What is the time complexity of the above functions?
+ * insert = constant & linear
+ * retrieve = linear.
+ * remove = linear.
  */

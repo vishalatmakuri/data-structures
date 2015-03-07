@@ -43,4 +43,7 @@ Binarymethods.depthFirstLog=function(fun){
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * insert = log(n)
+ * contains = log(n)
+ * depthFirstLog = log(n);
  */
